@@ -7,7 +7,7 @@ module.exports = {
   theme: {
   extend: {
     fontFamily: {
-      sans: ['var(--font-cookie)', 'cursive'],
+      sans: ['var(--font-playpen)', 'cursive'],
       inter: ['var(--font-inter)', 'sans-serif'],
     },
   },

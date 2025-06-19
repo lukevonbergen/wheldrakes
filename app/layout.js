@@ -1,12 +1,16 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import { Cookie } from 'next/font/google';
+import { Playpen_Sans_Thai } from 'next/font/google';
 import Nav from '@/components/navigation/Nav_1';
 import Footer from '@/components/footer/Footer_1';
 import Banner from '@/components/banner/Banner_1';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const cookie = Cookie({ weight: '400', subsets: ['latin'], variable: '--font-cookie' });
+const playpen = Playpen_Sans_Thai({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-playpen',
+});
 
 export const metadata = {
   title: 'Wheldrakes – Artisan Coffee & Brunch in York',
@@ -17,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${cookie.variable} font-sans antialiased`}>
+      <body className={`${playpen.variable} font-sans antialiased`}>
         <Banner />
         <Nav />
         <main>{children}</main>
