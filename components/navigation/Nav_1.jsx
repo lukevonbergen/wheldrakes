@@ -27,11 +27,12 @@ export default function Navbar() {
         <div className="hidden md:block">
           <a
             href="/contact"
-            className="text-white hover:text-white hover:bg-slate-600 border border-slate-600 px-5 py-1.5 rounded-full text-sm font-medium transition"
+            className="bg-slate-600 text-white px-5 py-1.5 rounded-full text-sm font-medium shadow hover:bg-slate-700 transition"
           >
             Find Us
           </a>
         </div>
+
 
         {/* Mobile Hamburger */}
         <div className="md:hidden">
