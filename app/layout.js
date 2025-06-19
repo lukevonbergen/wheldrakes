@@ -1,12 +1,12 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import { Playpen_Sans_Thai } from 'next/font/google';
+import { Playpen_Sans } from 'next/font/google';
 import Nav from '@/components/navigation/Nav_1';
 import Footer from '@/components/footer/Footer_1';
 import Banner from '@/components/banner/Banner_1';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const playpen = Playpen_Sans_Thai({
+const playpen = Playpen_Sans({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-playpen',
