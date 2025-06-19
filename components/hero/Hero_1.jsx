@@ -51,7 +51,7 @@ export default function HeroSection() {
         <div className="relative lg:w-1/2">
           <div className="relative w-full max-w-md mx-auto">
             <Image
-              src="https://images.pexels.com/photos/851555/pexels-photo-851555.jpeg"
+              src="https://images.pexels.com/photos/1510684/pexels-photo-1510684.jpeg"
               alt="Flat white from Wheldrakes"
               width={600}
               height={400}
