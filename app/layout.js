@@ -16,6 +16,9 @@ export const metadata = {
   title: 'Wheldrakes – Artisan Coffee & Brunch in York',
   description:
     'Wheldrakes is a beloved independent café in York, serving artisan coffee, fresh brunch, and homemade treats in a cosy, relaxed setting just minutes from York Minster.',
+    icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }) {
