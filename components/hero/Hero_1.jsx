@@ -4,7 +4,7 @@ import { Coffee, Users, Heart } from 'lucide-react';
 export default function HeroSection() {
   return (
     <section className="bg-[#f9f7f4] py-24 px-6 md:px-12 font-sans">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         
         {/* Text Content */}
         <div className="lg:w-1/2 text-center lg:text-left">
