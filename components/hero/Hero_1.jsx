@@ -1,42 +1,66 @@
+import Image from 'next/image';
+import { Coffee, Users, Heart } from 'lucide-react';
+
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden py-28 px-6 md:px-12">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute w-[600px] h-[600px] bg-blue-100 rounded-full blur-3xl opacity-50 top-[-200px] left-[-200px]"></div>
-        <div className="absolute w-[400px] h-[400px] bg-pink-100 rounded-full blur-2xl opacity-50 bottom-[-100px] right-[-100px]"></div>
-      </div>
+    <section className="bg-[#f9f7f4] py-24 px-6 md:px-12">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
+        
+        {/* Text Content */}
+        <div className="lg:w-1/2 text-center lg:text-left">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[#4b2e2e] leading-tight mb-6">
+            The best breakfast, coffee, and cakes in the heart of York
+          </h1>
+          <p className="text-lg text-gray-700 mb-8">
+            Handcrafted daily by our family-run team — Wheldrakes is your cosy spot for brunch, scones, and a proper cup of coffee.
+          </p>
 
-      <div className="max-w-5xl mx-auto text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6 text-gray-900">
-          This is one of the <span className="text-blue-600">many components</span>
-        </h1>
-        <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-8">
-          This is some amendable text, it's great for a subheading and can be adjusted accordingly.
-        </p>
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-12">
+            <a
+              href="/menu"
+              className="bg-[#4b2e2e] text-white px-6 py-3 rounded-full font-medium shadow hover:opacity-90 transition"
+            >
+              See Our Menu
+            </a>
+            <a
+              href="/gallery"
+              className="border border-[#4b2e2e] text-[#4b2e2e] px-6 py-3 rounded-full font-medium hover:bg-[#4b2e2e]/10 transition"
+            >
+              View Gallery
+            </a>
+          </div>
 
-        <div className="flex justify-center gap-4">
-          <a
-            href="#contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-md font-medium text-lg shadow hover:bg-blue-700 transition"
-          >
-            Button One
-          </a>
-          <a
-            href="#examples"
-            className="text-blue-600 font-medium px-8 py-3 rounded-md border border-blue-200 bg-white hover:border-blue-400 transition"
-          >
-            Button Two
-          </a>
+          {/* Icons for values */}
+          <div className="flex justify-center lg:justify-start gap-6 text-sm text-gray-600">
+            <div className="flex items-center gap-2">
+              <Coffee className="w-5 h-5 text-[#4b2e2e]" />
+              <span>Artisan Coffee</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Users className="w-5 h-5 text-[#4b2e2e]" />
+              <span>Family-Run</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Heart className="w-5 h-5 text-[#4b2e2e]" />
+              <span>Locally Loved</span>
+            </div>
+          </div>
         </div>
 
-        <p className="mt-12 text-sm text-gray-400 tracking-wide uppercase">
-          Trusted by brands subtitle
-        </p>
-
-        <div className="flex justify-center items-center gap-10 mt-6 opacity-80 grayscale">
-          <img src="/logo-placeholder-1.svg" alt="Brand 1" className="h-6" />
-          <img src="/logo-placeholder-2.svg" alt="Brand 2" className="h-6" />
-          <img src="/logo-placeholder-3.svg" alt="Brand 3" className="h-6" />
+        {/* Hero Image */}
+        <div className="relative lg:w-1/2">
+          <div className="relative w-full max-w-md mx-auto">
+            <Image
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80"
+              alt="Flat white from Wheldrakes"
+              width={600}
+              height={400}
+              className="rounded-2xl shadow-lg object-cover"
+            />
+            <div className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white text-xs px-4 py-1 rounded-full shadow border font-semibold text-gray-600 tracking-wide">
+              Fresh Daily Bakes • York
+            </div>
+          </div>
         </div>
       </div>
     </section>

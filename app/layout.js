@@ -1,17 +1,26 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
+import Nav from '@/components/navigation/Nav_1';
+import Footer from '@/components/footer/Footer_1';
+import Banner from '@/components/banner/Banner_1';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
-  title: 'Your App',
-  description: 'Next-gen £249 websites',
+  title: 'Wheldrakes – Artisan Coffee & Brunch in York',
+  description:
+    'Wheldrakes is a beloved independent café in York, serving artisan coffee, fresh brunch, and homemade treats in a cosy, relaxed setting just minutes from York Minster.',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} antialiased`}>
+        <Banner />
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -1,32 +1,72 @@
+'use client';
+import { useState } from 'react';
+import Image from 'next/image';
+
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="w-full py-6 px-6 md:px-12 border-b border-gray-200 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#" className="text-xl font-bold tracking-tight text-gray-900">
-          NavBar One
-        </a>
+    <header className="w-full py-3 px-4 md:px-8 bg-yellow-100 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto bg-white rounded-full shadow-md px-6 py-2 flex items-center justify-between">
+        
+        {/* Left: Logo + Links */}
+        <div className="flex items-center gap-8">
+          <a href="/">
+            <Image
+              src="/images/logo/logo_wheldrakes.png"
+              alt="Wheldrakes Logo"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
+          </a>
 
-        <nav className="hidden md:flex space-x-8 text-sm font-medium text-gray-700">
-          <a href="#features" className="hover:text-black transition">Link 1</a>
-          <a href="#pricing" className="hover:text-black transition">Link 2</a>
-          <a href="#examples" className="hover:text-black transition">Link 3</a>
-          <a href="#contact" className="hover:text-black transition">Link 4</a>
-        </nav>
+          <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-700">
+            <a href="/" className="hover:text-amber-600 transition">Menu</a>
+            <a href="/gallery" className="hover:text-amber-600 transition">Gallery</a>
+            <a href="/about" className="hover:text-amber-600 transition">About</a>
+            <a href="/contact" className="hover:text-amber-600 transition">Contact</a>
+          </nav>
+        </div>
 
-        <div className="hidden md:flex items-center gap-4">
+        {/* Right: CTA or Toggle */}
+        <div className="hidden md:block">
           <a
-            href="#contact"
-            className="bg-black text-white px-5 py-2 rounded-lg text-sm font-semibold shadow hover:opacity-90 transition"
+            href="/contact"
+            className="text-amber-600 hover:text-white hover:bg-amber-600 border border-amber-600 px-5 py-1.5 rounded-full text-sm font-medium transition"
           >
-            Nav Button
+            Find Us
           </a>
         </div>
 
+        {/* Mobile Hamburger */}
         <div className="md:hidden">
-          {/* Mobile menu toggle placeholder (can be a hamburger icon if needed) */}
-          <button className="text-gray-800">☰</button>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-gray-800 text-2xl focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            ☰
+          </button>
         </div>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-white rounded-b-xl shadow-md mt-1 mx-4 px-6 py-4 space-y-4 text-sm font-semibold text-gray-700 transition-all">
+          <a href="/" onClick={() => setIsOpen(false)} className="block hover:text-amber-600">Menu</a>
+          <a href="/gallery" onClick={() => setIsOpen(false)} className="block hover:text-amber-600">Gallery</a>
+          <a href="/about" onClick={() => setIsOpen(false)} className="block hover:text-amber-600">About</a>
+          <a href="/contact" onClick={() => setIsOpen(false)} className="block hover:text-amber-600">Contact</a>
+          <a
+            href="/contact"
+            onClick={() => setIsOpen(false)}
+            className="block text-center bg-amber-600 text-white px-4 py-2 rounded-full font-medium shadow hover:bg-amber-700 transition"
+          >
+            Find Us
+          </a>
+        </div>
+      )}
     </header>
   );
 }
