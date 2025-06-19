@@ -25,7 +25,11 @@ export default function ContactPage() {
           
           {/* Left: Contact Details */}
           <div>
-            <h2 className="text-2xl font-semibold text-[#4b2e2e] mb-6">Contact Details</h2>
+            <h2 className="text-2xl font-semibold text-[#4b2e2e] mb-6">Where to Find Us</h2>
+            <p className="text-md text-gray-700 mb-4">
+              You’ll find us tucked away on Goodramgate — just a 2-minute walk from York Minster. 
+              Whether you're stopping in for a flat white or a full brunch, we're right in the heart of the city.
+            </p>
             <p className="text-md text-gray-700 mb-4">
               <strong>Address:</strong><br />
               5C Goodramgate, York YO1 7LJ, United Kingdom
@@ -34,21 +38,16 @@ export default function ContactPage() {
               <strong>Phone:</strong><br />
               <a href="tel:+447940210670" className="text-[#4b2e2e] hover:underline">07940 210670</a>
             </p>
-            <p className="text-md text-gray-700 mb-4">
+            <p className="text-md text-gray-700">
               <strong>Email:</strong><br />
               <a href="mailto:hello@wheldrakes.co.uk" className="text-[#4b2e2e] hover:underline">hello@wheldrakes.co.uk</a>
             </p>
-            <p className="text-md text-gray-700">
-              <strong>Opening Hours:</strong><br />
-              Mon: 8:30 am – 3:30 pm<br />
-              Tue–Wed: Closed<br />
-              Thu–Sun: 8:30 am – 3:30 pm
-            </p>
           </div>
 
+          {/* Right: Café Image */}
           <div>
             <Image
-              src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/9e/b1/e0/photo1jpg.jpg?w=1000&h=-1&s=1"
               alt="Friendly café interior"
               width={600}
               height={400}
@@ -57,6 +56,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Google Map Embed */}
       <FindUs />
     </main>
   );
