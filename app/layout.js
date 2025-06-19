@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${cookie.variable} antialiased`}>
+      <body className={`${cookie.variable} font-sans antialiased`}>
         <Banner />
         <Nav />
         <main>{children}</main>
