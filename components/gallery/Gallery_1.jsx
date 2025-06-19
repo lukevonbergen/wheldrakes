@@ -3,12 +3,12 @@
 import { useState } from 'react';
 
 const images = [
-  { src: 'https://picsum.photos/seed/gallery1/800/600', alt: 'Placeholder image 1' },
-  { src: 'https://picsum.photos/seed/gallery2/800/600', alt: 'Placeholder image 2' },
-  { src: 'https://picsum.photos/seed/gallery3/800/600', alt: 'Placeholder image 3' },
-  { src: 'https://picsum.photos/seed/gallery4/800/600', alt: 'Placeholder image 4' },
-  { src: 'https://picsum.photos/seed/gallery5/800/600', alt: 'Placeholder image 5' },
-  { src: 'https://picsum.photos/seed/gallery6/800/600', alt: 'Placeholder image 6' },
+  { src: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/f7/16/dc/easter-2022.jpg?w=1000&h=-1&s=1', alt: 'Placeholder image 1' },
+  { src: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/f7/16/a8/happy-easter-2022.jpg?w=1000&h=-1&s=1', alt: 'Placeholder image 2' },
+  { src: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/b7/4f/6a/wheldrakes.jpg?w=1000&h=-1&s=1', alt: 'Placeholder image 3' },
+  { src: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/65/bb/02/wheldrakes.jpg?w=1000&h=-1&s=1', alt: 'Placeholder image 4' },
+  { src: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/b7/4f/71/wheldrakes.jpg?w=1000&h=-1&s=1', alt: 'Placeholder image 5' },
+  { src: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/9c/5f/d6/wheldrakes.jpg?w=1000&h=-1&s=1', alt: 'Placeholder image 6' },
 ];
 
 export default function Gallery() {
@@ -17,13 +17,6 @@ export default function Gallery() {
   return (
     <section className="bg-white py-24 px-6 md:px-12 border-t border-gray-100">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-          The Gallery
-        </h2>
-        <p className="text-lg md:text-xl text-gray-600 mb-12">
-          Pictures (click to enlarge)
-        </p>
-
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {images.map(({ src, alt }, i) => (
             <div

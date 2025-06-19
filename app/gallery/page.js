@@ -1,4 +1,5 @@
 import Gallery from "@/components/gallery/Gallery_1";
+import Location from '@/components/findus/FindUs_1'
 
 export const metadata = {
   title: "Gallery | Wheldrakes",
@@ -18,6 +19,7 @@ export default function GalleryPage() {
       </section>
 
       <Gallery />
+      <Location />
     </main>
   );
 }
