@@ -26,7 +26,7 @@ export default function HowToFindUs() {
         <div className="md:w-1/2 w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-md border">
           <iframe
             title="Wheldrakes Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2361.603951880767!2d-1.0799383841620833!3d53.96182357971413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487931a5f1d65a43%3A0xc2fdc2a514fe6b9c!2sWheldrakes%2C%205C%20Goodramgate%2C%20York%20YO1%207LJ!5e0!3m2!1sen!2suk!4v1718521040000!5m2!1sen!2suk"
+            src="https://www.google.com/maps/embed/v1/place?q=5C+Goodramgate+York+YO1+7LJ,+United+Kingdom&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
             width="100%"
             height="100%"
             style={{ border: 0 }}
