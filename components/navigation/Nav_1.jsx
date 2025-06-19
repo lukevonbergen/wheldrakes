@@ -16,9 +16,8 @@ export default function Navbar() {
           </a>
 
           <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-700">
-            <a href="/" className="hover:text-amber-600 transition">Menu</a>
-            <a href="/gallery" className="hover:text-amber-600 transition">Gallery</a>
             <a href="/about" className="hover:text-amber-600 transition">About</a>
+            <a href="/gallery" className="hover:text-amber-600 transition">Gallery</a>
             <a href="/contact" className="hover:text-amber-600 transition">Contact</a>
           </nav>
         </div>

@@ -13,9 +13,8 @@ export default function Footer() {
 
         {/* Nav Links */}
         <nav className="flex space-x-6 mb-4 md:mb-0">
-          <a href="/" className="hover:text-gray-900 transition">Menu</a>
-          <a href="/gallery" className="hover:text-gray-900 transition">Gallery</a>
           <a href="/about" className="hover:text-gray-900 transition">About</a>
+          <a href="/gallery" className="hover:text-gray-900 transition">Gallery</a>
           <a href="/contact" className="hover:text-gray-900 transition">Contact</a>
         </nav>
 
