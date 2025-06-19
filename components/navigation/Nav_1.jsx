@@ -6,8 +6,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full py-3 px-4 md:px-8 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto bg-white rounded-full shadow-md px-6 py-2 flex items-center justify-between">
+    <header className="bg-[#f9f7f4] w-full py-3 px-4 md:px-8 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto bg-white rounded-full shadow-md px-6 py-4 flex items-center justify-between">
         
         {/* Left: Logo + Links */}
         <div className="flex items-center gap-8">
@@ -27,7 +27,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <a
             href="/contact"
-            className="text-amber-600 hover:text-white hover:bg-amber-600 border border-amber-600 px-5 py-1.5 rounded-full text-sm font-medium transition"
+            className="text-white hover:text-white hover:bg-slate-600 border border-slate-600 px-5 py-1.5 rounded-full text-sm font-medium transition"
           >
             Find Us
           </a>
