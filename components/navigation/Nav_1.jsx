@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-[#f9f7f4] w-full py-3 px-4 md:px-8 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto bg-white rounded-full shadow-md px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto bg-white rounded-full shadow-md px-6 py-6 flex items-center justify-between">
         
         {/* Left: Logo + Links */}
         <div className="flex items-center gap-8">
