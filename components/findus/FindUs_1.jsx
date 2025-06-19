@@ -1,39 +1,37 @@
 export default function HowToFindUs() {
   return (
-    <section className="bg-white py-24 px-6 md:px-12 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        
-        {/* Text Content */}
-        <div className="md:w-1/2 text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-            How to Find Us
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Our studio is located in the heart of London, just a short walk from Liverpool Street Station.
-          </p>
-          <p className="text-md text-gray-600">
-            123 Startup Lane<br />
-            Shoreditch, London EC2A 4DP<br />
-            <br />
-            <strong>Opening Hours:</strong><br />
-            Mon–Fri: 9:00am – 6:00pm<br />
-            Sat–Sun: Closed
-          </p>
-        </div>
+    <section className="relative bg-[#f9f7f4] py-24 px-6 md:px-12">
+      {/* Full-width Google Map */}
+      <div className="absolute inset-0">
+        <iframe
+          title="Wheldrakes Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2361.603951880767!2d-1.0799383841620833!3d53.96182357971413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487931a5f1d65a43%3A0xc2fdc2a514fe6b9c!2sWheldrakes%2C%205C%20Goodramgate%2C%20York%20YO1%207LJ!5e0!3m2!1sen!2suk!4v1718521040000!5m2!1sen!2suk"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+        {/* Overlay tint for readability */}
+        <div className="absolute inset-0 bg-[#f9f7f4]/70 backdrop-blur-sm" />
+      </div>
 
-        {/* Google Map Embed */}
-        <div className="md:w-1/2 w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-md">
-          <iframe
-            title="Our Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19834.89609613451!2d-0.0921685!3d51.5225948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cb3c3b7f7e1%3A0x4e5f26c16e9e6f33!2sShoreditch%2C%20London!5e0!3m2!1sen!2suk!4v1717938593324!5m2!1sen!2suk"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+      {/* Text on top of map */}
+      <div className="relative z-10 max-w-4xl mx-auto text-center text-[#4b2e2e]">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">How to Find Us</h2>
+        <p className="text-lg md:text-xl mb-6 text-gray-700">
+          We’re located just a stone’s throw from York Minster — perfect for breakfast, coffee, or cake after a wander through the Shambles.
+        </p>
+        <p className="text-md text-gray-700 leading-relaxed">
+          <strong>Address:</strong><br />
+          5C Goodramgate<br />
+          York YO1 7LJ, United Kingdom
+          <br /><br />
+          <strong>Opening Hours:</strong><br />
+          Thursday–Monday: 8:30 AM – 3:30 PM<br />
+          Tuesday & Wednesday: Closed
+        </p>
       </div>
     </section>
   );
